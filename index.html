@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Master Tile Projects | Quality Tiling in Sydney. Built to Last.</title>
+<meta name="description" content="Master Tile Projects: professional bathroom, kitchen, floor, wall and outdoor tiling for homes, builders and businesses across Sydney, NSW. Call 0459 598 654.">
+<meta name="theme-color" content="#02142A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Master Tile Projects | Quality Tiling. Built to Last.">
+<meta property="og:description" content="Precise, professional tiling for bathrooms, kitchens, floors, walls and outdoor spaces across Sydney, NSW.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%2302142A'/%3E%3Cg transform='translate(10 8) scale(.8)'%3E%3Cpolygon points='50,5 70,25 50,45 30,25' fill='%23F9F6F2'/%3E%3Cpolygon points='70,25 90,45 70,65 50,45' fill='%23C48B31'/%3E%3Cpolygon points='30,25 50,45 30,65 10,45' fill='%23F9F6F2'/%3E%3Cpolygon points='50,45 70,65 50,85 30,65' fill='%23C48B31'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Master Tile Projects","telephone":"+61459598654","email":"master_tiling@outlook.com","areaServed":"Sydney, NSW, Australia","description":"Professional tiling for bathrooms, kitchens, floors, walls and outdoor spaces. Residential and commercial."}
+</script>
+<style>
+  :root{
+    --navy:#0A1F38;
+    --navy-deep:#02142A;
+    --gold:#C48B31;
+    --gold-soft:#A8885F;
+    --white:#F9F6F2;
+    --stone:#E9E7E4;
+    --charcoal:#3C3831;
+    --stone-grey:#90785C;
+
+    --muted:#5E5446;          /* readable body grey, same warm family as stone-grey */
+    --gold-ink:#7A5819;       /* gold darkened for text on light backgrounds */
+    --line:rgba(196,139,49,.5);
+    --grout:rgba(196,139,49,.28);
+    --rule:rgba(60,56,49,.2);
+    --ease:cubic-bezier(.22,.8,.24,1);
+    --head-h:76px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%;}
+  body{
+    font-family:'Urbanist',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+    font-size:1.0625rem;
+    line-height:1.65;
+    background:var(--white);
+    color:var(--charcoal);
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  h1,h2,h3,h4{font-weight:800;line-height:1.08;letter-spacing:-.03em;}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px;}
+  .container{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,32px);}
+  .skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--navy-deep);padding:10px 16px;border-radius:100px;font-weight:700;z-index:2000;}
+  .skip:focus{left:12px;}
+
+  /* ===== TILE PATTERNS (used as tile samples) ===== */
+  .pat{
+    --u:14px;
+    background-color:var(--navy);
+    background-repeat:repeat;
+  }
+  .pat-brick{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cpath d='M0 1H56M0 29H56M1 0V28M29 28V56' stroke='%23C48B31' stroke-opacity='.55' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-size:calc(var(--u)*2) calc(var(--u)*2);
+  }
+  .pat-hex{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='48'%3E%3Cpath d='M14 0L28 8V24L14 32L0 24V8ZM14 32V48' stroke='%23C48B31' stroke-opacity='.55' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-size:calc(var(--u)*1.5) calc(var(--u)*2.5714);
+  }
+  .pat-grid{
+    background-image:linear-gradient(var(--line) 1.5px,transparent 1.5px),linear-gradient(90deg,var(--line) 1.5px,transparent 1.5px);
+    background-size:var(--u) var(--u);
+  }
+  .pat-check{
+    background-image:conic-gradient(rgba(196,139,49,.28) 25%,transparent 0 50%,rgba(196,139,49,.28) 0 75%,transparent 0);
+    background-size:calc(var(--u)*2) calc(var(--u)*2);
+  }
+  .pat-mosaic{
+    background-image:
+      linear-gradient(rgba(196,139,49,.4) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(196,139,49,.4) 1px,transparent 1px),
+      conic-gradient(rgba(196,139,49,.22) 25%,transparent 0 50%,rgba(196,139,49,.22) 0 75%,transparent 0);
+    background-size:calc(var(--u)/2) calc(var(--u)/2),calc(var(--u)/2) calc(var(--u)/2),var(--u) var(--u);
+  }
+  .pat-diamond{
+    background-image:
+      repeating-linear-gradient(45deg,transparent 0 calc(var(--u) - 1.5px),var(--line) calc(var(--u) - 1.5px) var(--u)),
+      repeating-linear-gradient(-45deg,transparent 0 calc(var(--u) - 1.5px),var(--line) calc(var(--u) - 1.5px) var(--u));
+  }
+  .pat-ripple{
+    background-image:repeating-radial-gradient(circle at 50% 135%,transparent 0 calc(var(--u)*.8),var(--line) calc(var(--u)*.8) calc(var(--u)*.8 + 1.5px));
+  }
+
+  /* ===== LOGO ===== */
+  .logo{display:flex;align-items:center;gap:12px;}
+  .logo svg{width:44px;height:44px;flex-shrink:0;}
+  .logo-text{display:flex;flex-direction:column;line-height:1.1;}
+  .logo-text .m1{font-weight:800;font-size:20px;color:var(--white);letter-spacing:1.5px;}
+  .logo-text .m2{font-weight:700;font-size:12.5px;color:var(--gold);letter-spacing:2.4px;}
+
+  /* ===== HEADER ===== */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    background:transparent;
+    border-bottom:1px solid transparent;
+    transition:background .3s ease,border-color .3s ease,box-shadow .3s ease;
+  }
+  header.solid,header.menu-open{
+    background:rgba(2,20,42,.94);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    border-bottom-color:rgba(196,139,49,.25);
+    box-shadow:0 6px 28px rgba(0,0,0,.25);
+  }
+  .nav-wrap{display:flex;align-items:center;justify-content:space-between;height:var(--head-h);}
+  nav ul{display:flex;align-items:center;gap:34px;}
+  nav a{color:var(--stone);font-size:15px;font-weight:600;position:relative;transition:color .2s;}
+  nav a:not(.nav-cta)::after{
+    content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--gold);
+    transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease);
+  }
+  nav a:not(.nav-cta):hover{color:var(--white);}
+  nav a:not(.nav-cta):hover::after{transform:scaleX(1);}
+  .nav-cta{
+    display:inline-block;
+    background:var(--gold);color:var(--navy-deep)!important;
+    padding:11px 22px;border-radius:100px;font-weight:800;font-size:14px;
+    transition:background .2s,transform .2s;
+  }
+  .nav-cta:hover{background:var(--white);transform:translateY(-1px);}
+  .menu-toggle{
+    display:none;background:none;border:0;cursor:pointer;
+    width:44px;height:44px;border-radius:50%;
+    flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  }
+  .menu-toggle span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:transform .3s var(--ease),opacity .2s;}
+  header.menu-open .menu-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  header.menu-open .menu-toggle span:nth-child(2){opacity:0;}
+  header.menu-open .menu-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* ===== BUTTONS ===== */
+  .btn-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:16px 32px;border-radius:100px;
+    font-weight:800;font-size:15px;letter-spacing:.2px;line-height:1.2;
+    border:1px solid transparent;
+    transition:background .25s,color .25s,border-color .25s,transform .25s var(--ease);
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-gold{background:var(--gold);color:var(--navy-deep);box-shadow:0 10px 26px -10px rgba(196,139,49,.7);}
+  .btn-gold:hover{background:var(--white);}
+  .btn-outline{border-color:rgba(249,246,242,.4);color:var(--white);}
+  .btn-outline:hover{border-color:var(--gold);background:rgba(249,246,242,.07);}
+  .btn-dark{background:var(--navy-deep);color:var(--white);}
+  .btn-dark:hover{background:var(--gold);color:var(--navy-deep);}
+  .btn-line{border-color:var(--navy-deep);color:var(--navy-deep);}
+  .btn-line:hover{background:var(--navy-deep);color:var(--white);}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;isolation:isolate;overflow:hidden;
+    min-height:100vh;min-height:100svh;
+    display:flex;flex-direction:column;
+    background:var(--navy-deep);color:var(--white);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:
+      radial-gradient(820px 560px at 80% 48%,rgba(196,139,49,.17),transparent 66%),
+      linear-gradient(165deg,var(--navy) 0%,var(--navy-deep) 72%);
+  }
+  .hero-main{flex:1;display:flex;align-items:center;padding:calc(var(--head-h) + 44px) 0 56px;}
+  .hero-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+    align-items:center;gap:32px;
+  }
+  .hero-rule{display:block;width:64px;height:3px;background:var(--gold);margin-bottom:28px;}
+  .hero h1{
+    font-size:clamp(2.7rem,7vw,5.5rem);
+    line-height:1.02;letter-spacing:-.04em;font-weight:800;
+    color:var(--white);
+  }
+  .hero .lead{
+    margin:26px 0 36px;max-width:46ch;
+    color:var(--stone);font-size:clamp(1.05rem,1.5vw,1.2rem);
+  }
+  .hero-note{margin-top:26px;font-size:.95rem;color:var(--stone);opacity:.8;max-width:46ch;}
+  .hero-art{justify-self:end;width:min(100%,640px);transform:translateX(7%);}
+  .hero-art svg{display:block;width:100%;height:auto;overflow:visible;}
+  /* the one moment: the tiles get laid one by one */
+  .hero-art polygon{transform-box:fill-box;transform-origin:center;animation:lay .8s var(--ease) both;}
+  @keyframes lay{
+    from{opacity:0;transform:scale(.35) rotate(-14deg);}
+    to{opacity:1;transform:none;}
+  }
+  .t-gold{fill:var(--gold);}
+  .t-white{fill:var(--white);}
+  .t-soft{fill:var(--gold-soft);}
+  .t-navy{fill:#15375f;}
+  .t-line{fill:rgba(196,139,49,.07);stroke:var(--gold);stroke-width:1.5;}
+
+  .usp{border-top:1px solid var(--grout);}
+  .usp ul{display:grid;grid-template-columns:repeat(4,1fr);}
+  .usp li{padding:26px 24px 30px 0;}
+  .usp li + li{border-left:1px solid var(--grout);padding-left:26px;}
+  .usp strong{
+    display:flex;align-items:center;gap:10px;
+    font-size:1.02rem;font-weight:800;color:var(--white);letter-spacing:-.01em;margin-bottom:4px;
+  }
+  .usp strong::before{content:"";width:8px;height:8px;background:var(--gold);transform:rotate(45deg);flex-shrink:0;}
+  .usp span{display:block;font-size:.92rem;line-height:1.5;color:var(--stone);opacity:.8;}
+
+  /* ===== SECTIONS ===== */
+  .sec{padding:clamp(64px,9vw,120px) 0;}
+  .sec-stone{background:var(--stone);}
+  .sec-navy{background:var(--navy-deep);color:var(--white);}
+  h2{font-size:clamp(2rem,4.4vw,3.4rem);color:var(--navy-deep);}
+  .sec-navy h2{color:var(--white);}
+  .sec p.copy{color:var(--muted);max-width:56ch;}
+
+  /* ===== ABOUT ===== */
+  .about-wrap{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(36px,6vw,88px);align-items:center;}
+  .board{
+    display:grid;grid-template-columns:repeat(6,1fr);
+    grid-auto-rows:clamp(48px,8.4vw,92px);gap:8px;
+  }
+  .board > *{border-radius:3px;border:1px solid rgba(196,139,49,.22);}
+  .b1{grid-column:1/5;grid-row:1/4;--u:30px;}
+  .b2{grid-column:5/7;grid-row:1/3;background:var(--gold);display:grid;place-items:center;border-color:transparent;}
+  .b2 svg{width:44%;height:auto;}
+  .b3{grid-column:5/7;grid-row:3/5;--u:22px;}
+  .b4{grid-column:1/3;grid-row:4/6;--u:26px;}
+  .b5{grid-column:3/5;grid-row:4/6;--u:24px;}
+  .b6{grid-column:5/7;grid-row:5/6;--u:12px;}
+  .about-text h2{margin-bottom:22px;}
+  .about-text p{color:var(--muted);margin-bottom:16px;max-width:58ch;}
+  .about-stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin-top:34px;border-top:1px solid var(--rule);}
+  .about-stats div{padding:20px 28px 0 0;}
+  .about-stats div + div{border-left:1px solid var(--rule);padding-left:28px;}
+  .about-stats strong{display:block;font-size:clamp(1.6rem,3vw,2.1rem);font-weight:800;letter-spacing:-.03em;color:var(--navy-deep);line-height:1.1;}
+  .about-stats span{font-size:.9rem;color:var(--muted);line-height:1.4;display:block;margin-top:4px;}
+
+  /* ===== SERVICES ===== */
+  .svc-wrap{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(36px,7vw,104px);align-items:start;}
+  .svc-intro{position:sticky;top:112px;}
+  .svc-intro h2{margin-bottom:20px;}
+  .svc-intro p{color:var(--muted);margin-bottom:30px;max-width:40ch;}
+  .svc-list li{
+    display:grid;grid-template-columns:72px minmax(0,1fr);gap:22px;align-items:center;
+    padding:20px 0;border-top:1px solid var(--rule);
+  }
+  .svc-list li:last-child{border-bottom:1px solid var(--rule);}
+  .swatch{width:72px;height:72px;border-radius:3px;border:1px solid rgba(196,139,49,.45);transition:transform .35s var(--ease);}
+  .svc-list li:hover .swatch{transform:rotate(-6deg) scale(1.06);}
+  .svc-list h3{font-size:1.3rem;color:var(--navy-deep);letter-spacing:-.02em;margin-bottom:3px;transition:color .2s;}
+  .svc-list li:hover h3{color:var(--gold-ink);}
+  .svc-list p{font-size:.98rem;color:var(--muted);line-height:1.5;}
+
+  /* ===== WHY US ===== */
+  .why-wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,7vw,104px);align-items:start;}
+  .why-intro .why-quote{
+    margin-top:30px;padding-left:22px;border-left:3px solid var(--gold);
+    color:var(--stone);max-width:36ch;
+  }
+  .why-quote strong{display:block;color:var(--white);font-weight:800;font-size:1.1rem;margin-bottom:2px;letter-spacing:-.01em;}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;}
+  .why-grid > div{padding:30px 28px 34px 0;border-top:1px solid var(--grout);}
+  .why-grid > div:nth-child(even){padding-left:28px;border-left:1px solid var(--grout);padding-right:0;}
+  .why-grid h3{font-size:1.25rem;color:var(--white);margin-bottom:8px;display:flex;gap:10px;align-items:center;letter-spacing:-.02em;}
+  .why-grid h3::before{content:"";width:9px;height:9px;background:var(--gold);transform:rotate(45deg);flex-shrink:0;}
+  .why-grid p{color:var(--stone);opacity:.82;font-size:.98rem;line-height:1.6;}
+
+  /* ===== CTA ===== */
+  .cta-wrap{
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center;
+    padding:clamp(40px,6vw,72px) 0;
+    border-top:3px solid var(--gold);border-bottom:1px solid var(--rule);
+  }
+  .cta-wrap h2{margin-bottom:16px;}
+  .cta-wrap p{color:var(--muted);margin-bottom:30px;max-width:40ch;}
+  .cta-contacts{display:flex;flex-direction:column;gap:26px;}
+  .cta-contact small{display:block;font-size:.95rem;color:var(--muted);font-weight:600;margin-bottom:2px;}
+  .cta-phone{
+    display:inline-block;font-size:clamp(2.2rem,5.4vw,3.8rem);font-weight:900;letter-spacing:-.04em;line-height:1.05;
+    color:var(--navy-deep);border-bottom:3px solid var(--gold);transition:color .2s;
+  }
+  .cta-phone:hover{color:var(--gold-ink);}
+  .cta-email{font-size:clamp(1.1rem,2.2vw,1.5rem);font-weight:700;color:var(--navy-deep);overflow-wrap:anywhere;border-bottom:2px solid var(--rule);transition:border-color .2s;}
+  .cta-email:hover{border-color:var(--gold);}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--navy-deep);color:var(--stone);padding:56px 0 26px;}
+  .footer-top{
+    display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:36px;
+    padding-bottom:38px;border-bottom:1px solid var(--grout);
+  }
+  .footer-tagline{font-size:.95rem;margin:14px 0 18px;max-width:30ch;opacity:.85;}
+  .social-link{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:40px;height:40px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);
+    transition:background .25s,color .25s;
+  }
+  .social-link:hover{background:var(--gold);color:var(--navy-deep);}
+  .social-link svg{width:18px;height:18px;}
+  .footer-col h4{font-size:1rem;color:var(--gold);margin-bottom:14px;letter-spacing:-.01em;}
+  .footer-col li{margin-bottom:9px;}
+  .footer-col a{font-size:.98rem;transition:color .2s;overflow-wrap:anywhere;}
+  .footer-col a:hover{color:var(--gold);}
+  .footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;padding-top:22px;font-size:.85rem;opacity:.7;}
+
+  /* ===== MOBILE CALL BAR ===== */
+  .call-bar{display:none;}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:1000px){
+    .hero-grid{grid-template-columns:1fr;gap:36px;}
+    .hero-art{justify-self:center;width:min(78vw,400px);transform:none;}
+    .hero-main{padding-top:calc(var(--head-h) + 36px);}
+    .svc-wrap,.why-wrap,.about-wrap,.cta-wrap{grid-template-columns:1fr;}
+    .svc-intro{position:static;}
+  }
+  @media (max-width:860px){
+    .menu-toggle{display:flex;}
+    nav{
+      position:fixed;top:var(--head-h);left:0;right:0;
+      background:var(--navy-deep);
+      border-bottom:1px solid rgba(196,139,49,.25);
+      max-height:0;overflow:hidden;visibility:hidden;
+      transition:max-height .4s var(--ease),visibility 0s .4s;
+    }
+    header.menu-open nav{max-height:440px;visibility:visible;transition:max-height .4s var(--ease),visibility 0s;}
+    nav ul{flex-direction:column;align-items:stretch;gap:0;padding:6px clamp(20px,4vw,32px) 26px;}
+    nav li{border-bottom:1px solid rgba(196,139,49,.15);}
+    nav li:last-child{border:0;padding-top:18px;}
+    nav a:not(.nav-cta){display:block;padding:16px 0;font-size:17px;}
+    nav a:not(.nav-cta)::after{display:none;}
+    .nav-cta{display:block;text-align:center;padding:15px 22px;font-size:16px;}
+    .usp ul{grid-template-columns:1fr 1fr;}
+    .usp li,.usp li + li{padding:20px 18px 22px 0;border-left:0;border-top:1px solid var(--grout);}
+    .usp li:nth-child(-n+2){border-top:0;}
+    .usp li:nth-child(even){padding-left:20px;border-left:1px solid var(--grout);}
+    .footer-top{grid-template-columns:1fr 1fr;}
+    .footer-top > div:first-child{grid-column:1/-1;}
+  }
+  @media (max-width:640px){
+    .btn{padding:15px 26px;}
+    .hero .btn-row .btn{flex:1 1 100%;}
+    .about-stats{grid-template-columns:1fr 1fr 1fr;}
+    .about-stats div{padding-right:12px;}
+    .about-stats div + div{padding-left:14px;}
+    .svc-list li{grid-template-columns:56px minmax(0,1fr);gap:16px;}
+    .swatch{width:56px;height:56px;}
+    .svc-list h3{font-size:1.15rem;}
+    .why-grid{grid-template-columns:1fr;}
+    .why-grid > div,.why-grid > div:nth-child(even){padding:24px 0 26px;border-left:0;}
+    .cta-wrap .btn-row .btn{flex:1 1 100%;}
+    .footer-top{grid-template-columns:1fr;}
+    footer{padding-bottom:calc(26px + 74px + env(safe-area-inset-bottom));}
+    .call-bar{
+      display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:900;
+      padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+      background:rgba(2,20,42,.96);
+      -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+      border-top:1px solid rgba(196,139,49,.3);
+    }
+    .call-bar a{flex:1;text-align:center;padding:13px 10px;border-radius:100px;font-weight:800;font-size:15px;}
+    .call-bar .cb-call{background:var(--gold);color:var(--navy-deep);}
+    .call-bar .cb-mail{border:1px solid rgba(249,246,242,.4);color:var(--white);}
+  }
+  @media (max-width:380px){
+    .usp ul{grid-template-columns:1fr;}
+    .usp li,.usp li:nth-child(even){border-left:0;padding-left:0;}
+    .usp li:nth-child(2){border-top:1px solid var(--grout);}
+    .about-stats{grid-template-columns:1fr;}
+    .about-stats div + div{border-left:0;padding-left:0;border-top:1px solid var(--rule);margin-top:14px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation:none!important;transition:none!important;}
+  }
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#about">Skip to content</a>
+
+<!-- ===== HEADER ===== -->
+<header id="siteHeader">
+  <div class="nav-wrap container">
+    <a href="#top" class="logo" aria-label="Master Tile Projects, home">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <polygon points="50,5 70,25 50,45 30,25" fill="#F9F6F2"/>
+        <polygon points="70,25 90,45 70,65 50,45" fill="#C48B31"/>
+        <polygon points="30,25 50,45 30,65 10,45" fill="#F9F6F2"/>
+        <polygon points="50,45 70,65 50,85 30,65" fill="#C48B31"/>
+        <rect x="44" y="39" width="12" height="12" fill="#02142A"/>
+      </svg>
+      <div class="logo-text">
+        <span class="m1">MASTER</span>
+        <span class="m2">TILE PROJECTS</span>
+      </div>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="siteNav" aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:+61459598654" class="nav-cta">Call Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-main">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-rule" aria-hidden="true"></span>
+        <h1>Quality Tiling.<br>Built to Last.</h1>
+        <p class="lead">Master Tile Projects delivers precise, professional tiling for bathrooms, kitchens, floors, walls and outdoor spaces — finished on time, every time.</p>
+        <div class="btn-row">
+          <a href="tel:+61459598654" class="btn btn-gold">Call 0459 598 654</a>
+          <a href="mailto:master_tiling@outlook.com" class="btn btn-outline">Email us</a>
+        </div>
+        <p class="hero-note">Working with homeowners, builders and businesses across Sydney, NSW.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 300 300" focusable="false">
+          <polygon class="t-gold"  points="150,104 196,150 150,196 104,150" style="animation-delay:.3s"/>
+          <polygon class="t-white" points="200,54 246,100 200,146 154,100"  style="animation-delay:.55s"/>
+          <polygon class="t-navy"  points="100,54 146,100 100,146 54,100"   style="animation-delay:.7s"/>
+          <polygon class="t-line"  points="200,154 246,200 200,246 154,200" style="animation-delay:.85s"/>
+          <polygon class="t-soft"  points="100,154 146,200 100,246 54,200"  style="animation-delay:1s"/>
+          <polygon class="t-white" points="250,104 296,150 250,196 204,150" style="animation-delay:1.15s"/>
+          <polygon class="t-line"  points="50,104 96,150 50,196 4,150"      style="animation-delay:1.3s"/>
+          <polygon class="t-gold"  points="150,4 196,50 150,96 104,50"      style="animation-delay:1.45s"/>
+          <polygon class="t-navy"  points="150,204 196,250 150,296 104,250" style="animation-delay:1.6s"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="usp">
+    <div class="container">
+      <ul>
+        <li><strong>Premium quality</strong><span>Materials and finishes built to last.</span></li>
+        <li><strong>Expert installation</strong><span>Precise workmanship on every job.</span></li>
+        <li><strong>Modern designs</strong><span>Feature walls, mosaics and clean finishes.</span></li>
+        <li><strong>Reliable and on time</strong><span>We show up and finish on schedule.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="sec" id="about">
+  <div class="container about-wrap">
+    <div class="board" aria-hidden="true">
+      <div class="pat pat-brick b1"></div>
+      <div class="b2">
+        <svg viewBox="0 0 100 100"><polygon points="50,5 70,25 50,45 30,25" fill="#02142A"/><polygon points="70,25 90,45 70,65 50,45" fill="#F9F6F2"/><polygon points="30,25 50,45 30,65 10,45" fill="#F9F6F2"/><polygon points="50,45 70,65 50,85 30,65" fill="#02142A"/></svg>
+      </div>
+      <div class="pat pat-hex b3"></div>
+      <div class="pat pat-check b4"></div>
+      <div class="pat pat-diamond b5"></div>
+      <div class="pat pat-mosaic b6"></div>
+    </div>
+    <div class="about-text">
+      <h2>Precision tiling, built on trust.</h2>
+      <p>Master Tile Projects is a Sydney-based tiling company delivering high-quality workmanship for bathrooms, kitchens, floors and outdoor spaces. We work directly with homeowners, builders and businesses across residential and commercial projects.</p>
+      <p>Every job is handled with professionalism, precision and reliability — from the first measurement to the final tile, so your space is finished properly and built to last.</p>
+      <div class="about-stats">
+        <div><strong>100%</strong><span>Hands-on service</span></div>
+        <div><strong>NSW</strong><span>Sydney and surrounds</span></div>
+        <div><strong>Res. &amp; Com.</strong><span>All property types</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="sec sec-stone" id="services">
+  <div class="container svc-wrap">
+    <div class="svc-intro">
+      <h2>Our tiling services</h2>
+      <p>From full bathroom renovations to new-home tiling packages, we handle every tile job with the same precision and care.</p>
+      <a href="tel:+61459598654" class="btn btn-dark">Call for a quote</a>
+    </div>
+    <ul class="svc-list">
+      <li><span class="swatch pat pat-brick" aria-hidden="true"></span><div><h3>Bathroom Tiling</h3><p>Wall and floor tiling for bathrooms, showers and wet areas.</p></div></li>
+      <li><span class="swatch pat pat-grid" aria-hidden="true"></span><div><h3>Kitchen Tiling</h3><p>Kitchen floors, splashbacks and feature walls.</p></div></li>
+      <li><span class="swatch pat pat-check" aria-hidden="true"></span><div><h3>Floor Tiling</h3><p>Professional installation for homes, apartments and commercial spaces.</p></div></li>
+      <li><span class="swatch pat pat-brick" style="--u:20px" aria-hidden="true"></span><div><h3>Wall Tiling</h3><p>Internal and external wall tiling with a clean, high-quality finish.</p></div></li>
+      <li><span class="swatch pat pat-hex" aria-hidden="true"></span><div><h3>Outdoor Tiling</h3><p>Patios, balconies, alfresco areas, pathways and entertaining spaces.</p></div></li>
+      <li><span class="swatch pat pat-diamond" aria-hidden="true"></span><div><h3>Driveway Tiling &amp; Paving</h3><p>Durable, professional finishes for driveways and entrances.</p></div></li>
+      <li><span class="swatch pat pat-grid" style="--u:24px" aria-hidden="true"></span><div><h3>Commercial Tiling</h3><p>Tiling solutions for shops, offices, restaurants and other properties.</p></div></li>
+      <li><span class="swatch pat pat-mosaic" aria-hidden="true"></span><div><h3>Tile Repairs &amp; Replacement</h3><p>Replacement of cracked, damaged or loose tiles.</p></div></li>
+      <li><span class="swatch pat pat-ripple" aria-hidden="true"></span><div><h3>Waterproofing</h3><p>Waterproofing for bathrooms, showers, balconies and wet areas.</p></div></li>
+      <li><span class="swatch pat pat-diamond" style="--u:10px" aria-hidden="true"></span><div><h3>Renovation Tiling</h3><p>Complete tiling services for bathroom, kitchen and full property renovations.</p></div></li>
+      <li><span class="swatch pat pat-hex" style="--u:9px" aria-hidden="true"></span><div><h3>Feature Walls &amp; Decorative Tiling</h3><p>Custom designs, feature walls, mosaics and modern finishes.</p></div></li>
+      <li><span class="swatch pat pat-check" style="--u:9px" aria-hidden="true"></span><div><h3>New Home Tiling</h3><p>Complete tiling packages for newly built homes and developments.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="sec sec-navy" id="why">
+  <div class="container why-wrap">
+    <div class="why-intro">
+      <h2>We don’t just lay tiles. We build masterpieces.</h2>
+      <p class="why-quote"><strong>Precision you can see</strong>Every tile, measured and set with care.</p>
+    </div>
+    <div class="why-grid">
+      <div><h3>Premium quality</h3><p>Materials and workmanship built to last, not just to look good on day one.</p></div>
+      <div><h3>Expert installation</h3><p>Precise, professional installation for every wall, floor and wet area.</p></div>
+      <div><h3>Reliable and on time</h3><p>We show up when we say we will and finish projects on schedule.</p></div>
+      <div><h3>Residential and commercial</h3><p>From single bathrooms to full commercial fit-outs, we handle every scale.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="sec" id="contact">
+  <div class="container">
+    <div class="cta-wrap">
+      <div>
+        <h2>Ready to start your project?</h2>
+        <p>Get in touch for a quote — no forms, just a quick call or email.</p>
+        <div class="btn-row">
+          <a href="tel:+61459598654" class="btn btn-dark">Call 0459 598 654</a>
+          <a href="mailto:master_tiling@outlook.com" class="btn btn-line">Send an email</a>
+        </div>
+      </div>
+      <div class="cta-contacts">
+        <div class="cta-contact"><small>Phone</small><a class="cta-phone" href="tel:+61459598654">0459 598 654</a></div>
+        <div class="cta-contact"><small>Email</small><a class="cta-email" href="mailto:master_tiling@outlook.com">master_tiling@outlook.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="logo">
+          <svg viewBox="0 0 100 100" style="width:38px;height:38px;" aria-hidden="true">
+            <polygon points="50,5 70,25 50,45 30,25" fill="#F9F6F2"/>
+            <polygon points="70,25 90,45 70,65 50,45" fill="#C48B31"/>
+            <polygon points="30,25 50,45 30,65 10,45" fill="#F9F6F2"/>
+            <polygon points="50,45 70,65 50,85 30,65" fill="#C48B31"/>
+            <rect x="44" y="39" width="12" height="12" fill="#02142A"/>
+          </svg>
+          <div class="logo-text">
+            <span class="m1">MASTER</span>
+            <span class="m2">TILE PROJECTS</span>
+          </div>
+        </div>
+        <p class="footer-tagline">Quality tiling, built to last. Servicing residential and commercial clients across Sydney, NSW.</p>
+        <a href="https://www.facebook.com/share/1D7QiEa4jV/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-link" aria-label="Master Tile Projects on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8V6.5c0-.7.3-1 1-1h2V2h-3c-3 0-4.5 1.8-4.5 4.5V8H7v3.5h2.5V22H14V11.5h2.8L17.3 8H14Z"/></svg>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Bathroom Tiling</a></li>
+          <li><a href="#services">Kitchen Tiling</a></li>
+          <li><a href="#services">Floor &amp; Wall Tiling</a></li>
+          <li><a href="#services">Waterproofing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+61459598654">0459 598 654</a></li>
+          <li><a href="mailto:master_tiling@outlook.com">master_tiling@outlook.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> Master Tile Projects. All rights reserved.</span>
+      <span>ABN 95 673 440 241</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Phone-only call bar -->
+<div class="call-bar">
+  <a class="cb-call" href="tel:+61459598654">Call now</a>
+  <a class="cb-mail" href="mailto:master_tiling@outlook.com">Email</a>
+</div>
+
+<script>
+  (function(){
+    var header = document.getElementById('siteHeader');
+    var toggle = document.getElementById('menuToggle');
+    var nav = document.getElementById('siteNav');
+
+    function onScroll(){ header.classList.toggle('solid', window.scrollY > 24); }
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+
+    function setMenu(open){
+      header.classList.toggle('menu-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    toggle.addEventListener('click', function(){ setMenu(!header.classList.contains('menu-open')); });
+    nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setMenu(false); });
+    window.addEventListener('resize', function(){ if(window.innerWidth > 860) setMenu(false); });
+
+    var y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
